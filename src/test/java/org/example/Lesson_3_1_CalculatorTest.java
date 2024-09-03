@@ -29,6 +29,7 @@ class Lesson_3_1_CalculatorTest {
     @Test
     @DisplayName("Проверка сложения")
     @Timeout(10)
+    @Tag("SimpleTest")
     void sum() {
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
         int a = -10;
@@ -40,6 +41,7 @@ class Lesson_3_1_CalculatorTest {
     @Test
     @Timeout(10)
     @DisplayName("Проверка вычитания")
+    @Tag("SimpleTest")
     void sub() {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -53,6 +55,7 @@ class Lesson_3_1_CalculatorTest {
     @Test
     @Timeout(10)
     @DisplayName("Проверка умножения")
+    @Tag("SimpleTest")
     void mult() {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -66,6 +69,7 @@ class Lesson_3_1_CalculatorTest {
     @Test
     @Timeout(10)
     @DisplayName("Проверка деления")
+    @Tag("SimpleTest")
     void div() {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -79,6 +83,7 @@ class Lesson_3_1_CalculatorTest {
     @ParameterizedTest(name = "#{index} - сложение {0} и {1}, ожидаемый результат {2}")
     @CsvSource({"1, 1, 2", "2, -2, 0", "0, 0, 0", "-1, -1, -2", "1, 1, 2"})
     @DisplayName("Параметризованные тесты сложения")
+    @Tag("ParamsTest")
     void sum_params(int a, int b, int expectedResult) {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -89,6 +94,7 @@ class Lesson_3_1_CalculatorTest {
     @RepeatedTest(10)
     @DisplayName("Повторяющаяся проверка сложения")
     @Timeout(10)
+    @Tag("RepeatTest")
     void sum_repeat() {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -101,6 +107,7 @@ class Lesson_3_1_CalculatorTest {
     @ParameterizedTest(name = "#{index} - Вычитание {0} из {1}, ожидаемый результат {2}")
     @CsvSource({"1, 1, 0", "2, -2, 4", "0, 0, 0", "-1, -1, 0", "1, 1, 0"})
     @DisplayName("Параметризованные тесты вычитания")
+    @Tag("ParamsTest")
     void sub_params(int a, int b, int expectedResult) {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -111,6 +118,7 @@ class Lesson_3_1_CalculatorTest {
     @RepeatedTest(10)
     @DisplayName("Повторяющаяся проверка вычитания")
     @Timeout(10)
+    @Tag("RepeatTest")
     void sub_repeat() {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -123,6 +131,7 @@ class Lesson_3_1_CalculatorTest {
     @ParameterizedTest(name = "#{index} - Умножение {0} на {1}, ожидаемый результат {2}")
     @CsvSource({"1, 1, 1", "2, -2, -4", "0, 0, 0", "-1, -1, 1", "1, 1, 1"})
     @DisplayName("Параметризованные тесты умножения")
+    @Tag("ParamsTest")
     void mult_params(int a, int b, int expectedResult) {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -133,6 +142,7 @@ class Lesson_3_1_CalculatorTest {
     @RepeatedTest(10)
     @DisplayName("Повторяющаяся проверка умножения")
     @Timeout(10)
+    @Tag("RepeatTest")
     void mult_repeat() {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -145,6 +155,7 @@ class Lesson_3_1_CalculatorTest {
     @ParameterizedTest(name = "#{index} - Деление {0} на {1}, ожидаемый результат {2}")
     @CsvSource({"1, 1, 1", "2, -2, -1", "0, 0, 0", "-6, -2, 3", "1, 1, 1"})
     @DisplayName("Параметризованные тесты деления")
+    @Tag("ParamsTest")
     void div_params(int a, int b, int expectedResult) {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
@@ -155,6 +166,7 @@ class Lesson_3_1_CalculatorTest {
     @RepeatedTest(10)
     @DisplayName("Повторяющаяся проверка деления")
     @Timeout(10)
+    @Tag("RepeatTest")
     void div_repeat() {
 
         Lesson_3_1_Calculator Calc = new Lesson_3_1_Calculator();
